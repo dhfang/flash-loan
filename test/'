@@ -1,8 +1,0 @@
-const Config = require("@truffle/config");
-const provision = require("@truffle/provisioner");
-const UniswapV2FactoryBytecode = require('@uniswap/v2-core/build/UniswapV2Factory.json').bytecode;
-const contract = require('@truffle/contract');
-const UniswapV2Factory = contract(UniswapV2FactoryBytecode);
-provision(UniswapV2Factory, Config.default());
-const con = UniswapV2Factory.new();
-console.log(Config.default());
